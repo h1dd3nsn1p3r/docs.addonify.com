@@ -1,6 +1,6 @@
-import "../assets/app.css";
-
 import { Inter } from "next/font/google";
+
+import "../assets/app.css";
 
 import type { AppProps } from "next/app";
 import type { ReactElement } from "react";
