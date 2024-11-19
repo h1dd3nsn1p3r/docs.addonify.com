@@ -1,5 +1,6 @@
 interface Props {
 	src: string;
+	type?: string;
 }
 
 /**
@@ -8,12 +9,11 @@ interface Props {
  * @param props
  * @returns
  */
-export default function VideoPlayer({ src }: Props) {
+export default function VideoPlayer({ src, type }: Props) {
 	return (
-		<div className="sm:my-6 my-4 sm:p-6 p-2 relative flex flex-col items-center justify-center overflow-hidden bg-blue-400 rounded-2xl shadow-sm">
-			<video className="w-full relative overflow-hidden rounded-xl" controls>
-				<source src={src} type="video/mp4" />
-				Your browser does not support the video tag.
+		<div className="sm:my-6 my-4 sm:p-6 p-2 relative flex flex-col items-center justify-center overflow-hidden bg-blue-400 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-md shadow-sm">
+			<video className="w-full relative overflow-hidden rounded-md" controls>
+				<source src={src} type={type || "video/mp4"} />
 			</video>
 		</div>
 	);

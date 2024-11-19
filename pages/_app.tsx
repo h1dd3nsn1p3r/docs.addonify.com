@@ -8,5 +8,11 @@ import type { ReactElement } from "react";
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export default function App({ Component, pageProps }: AppProps): ReactElement {
-	return <Component className={inter.className} {...pageProps} />;
+	return (
+		<Component
+			suppressHydrationWarning={true}
+			className={inter.className}
+			{...pageProps}
+		/>
+	);
 }
