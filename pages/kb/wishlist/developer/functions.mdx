@@ -1,0 +1,97 @@
+---
+title: Wishlist Helper Functions
+sidebarTitle: Functions
+---
+
+# Helper functions
+
+Addonify Wishlist has defined some useful helper functions that you may want to use. The helper functions could be found inside `inc/addonify-wishlist-helper-functions.php` file.
+
+```php showLineNumbers filename="addonify-wishlist-helper-functions.php"
+<?php
+
+/**
+ * Get the items in the wishlist.
+ *
+ * @since 1.0.0
+ * @return array $wishlist_items Array of wishlist items.
+ */
+function addonify_wishlist_get_wishlist_items()
+
+/**
+ * Get the count of items in the wishlist.
+ *
+ * @since 1.0.0
+ * @return int Count of items.
+ */
+function addonify_wishlist_get_wishlist_items_count()
+
+/**
+ * Check if product is in wishlist.
+ *
+ * @since 1.0.0
+ * @param int $product_id Product ID.
+ * @return boolean True if product is in wishlist, false otherwise.
+ */
+function addonify_wishlist_is_product_in_wishlist( $product_id )
+
+/**
+ * Get wishlist button label.
+ * If $in_wishlist is true, then already in wishlist button label will be returned. Else, active wishlist button label  * will be returned.
+ *
+ * @since 1.0.0
+ * @param boolean $in_wishlist If the item is in wishlist.
+ * @return string
+ */
+function addonify_wishlist_get_button_label( $in_wishlist = false )
+
+/**
+ * Get wishlist page url.
+ *
+ * @since 1.0.0
+ * @return string|boolean $wishlist_page_url Wishlist page url if found else false.
+ */
+function addonify_wishlist_get_wishlist_page_url()
+```
+
+Above functions about getting products, product count and checking if product is in wishlist only work when user is logged in as they are saved in database.
+
+There are also custom JavaScript event triggers that you can use.
+
+```javascript showLineNumbers filename="script.js"
+
+// addonify_added_to_wishlist fires after a product is added to the wishlist.
+$(document).on(
+	"addonify_added_to_wishlist",
+	function (
+		event,
+		[
+			{
+				productID: $product_id,
+				itemsCount: $no_of_items_in_wishlist,
+				thisButton: $current_add_to_wishlist_button,
+				modalContentUpdateData: $html_update_modal_data,
+			},
+		]
+	) {}
+);
+
+// addonify_added_to_wishlist fires after a product is removed from the wishlist.
+$(document).on(
+	"addonify_removed_from_wishlist",
+	function (
+		event,
+		[
+			{
+				productID: $product_id,
+				productName: $product_name,
+				itemsCount: $no_of_items_in_wishlist,
+				thisButton: $current_add_to_wishlist_button,
+				modalContentUpdateData: $html_update_modal_data,
+			},
+		]
+	) {}
+);
+```
+
+
