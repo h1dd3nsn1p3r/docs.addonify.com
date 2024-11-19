@@ -1,0 +1,38 @@
+---
+title: Troubleshooting Cache Issue
+sidebarTitle: Troubleshoot Cache
+---
+
+# Troubleshooting cache issue
+
+We all know cache is helpful to speed up our website load time. However, sometimes cache plugins create abnormal behaviour. If you are using Addonify Wishlist & any cache plugin together do not enable the following settings:
+
+- Defer JavaScript.
+- async JavaScript.
+- Combine JavaScript.
+
+In most cases `defer` & `async` JavaScript will break the plugin functionality. Whereas, in some cases combining JavaScript might also create problems. Feel free to test by combining JavaScript files which might also work for you.
+
+If you are still experiencing the problem with the cache plugin below guide will explain how you can troubleshoot the cache issue further.
+
+## Solution 1: Exclude cookies
+
+We use cookies to save the selected items in the wishlist. If you are experiencing a cache issue, kindly exclude the `addonify-wishlist` cookie in your cache plugin setting.
+
+## Solution 2: Exclude public facing JavaScript file
+
+If your cache plugin is caching the ajax calls made by our plugin you can fix that by excluding it from being cached & combined.
+
+```text
+addonify-wishlist-public.min.js
+```
+
+The complete URL to the Addonify Wishlist public JavaScript file would be:
+
+```text
+http://domain.com/wp-content/plugins/addonify-wishlist/public/assets/build/js/addonify-wishlist-public.min.js
+```
+
+**Note:** please make sure to change the `domain.com` with your actual domain name.
+
+If you are not sure how you can exclude the cookies and JavaScript file in the cache plugin setting feel free to contact us or the plugin author accordingly.

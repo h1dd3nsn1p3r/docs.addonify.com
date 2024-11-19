@@ -1,0 +1,33 @@
+---
+title: Custom Wishlist Button
+sidebarTitle: Custom Button
+---
+
+# Custom Wishlist Button
+
+Addonify Wishlist also supports custom add to wishlist button. Below is the markup of the custom add to wishlist button: 
+
+```php showLineNumbers filename="button.php"
+<button class="adfy-wishlist-btn addonify-add-to-wishlist-btn addonify-custom-wishlist-btn" data-product_id="{product_id}" data-product_name="{product_name}">{button_label}</button>
+```
+
+You can add custom CSS classes, but addonify-add-to-wishlist-btn is a necessary CSS class that is used to fire the add to wishlist functionality.
+
+You also need to set WooCommerce product ID in the attribute data-product_id and WooCommerce product name in the attribute data-product_name.
+
+You can have your own button label. But if you wish to have the button label from the Addonify Wishlist plugin’s setting page, use the code below:
+
+```php showLineNumbers filename="public.php"
+<?php
+addonify_wishlist_get_button_label( $in_wishlist = false )
+?>
+```
+
+You can also use the shortcode `[addonify_wishlist_button]` to add a custom add to wishlist button. The attributes that can be used in the shortcode are as follow:
+
+- product_id: Product’s id
+- button_label: Add to wishlist button label.
+- added_to_wishlist_button_label: Added to wishlist button label.
+- already_in_wishlist_button_label: Already in wishlist button label.
+- classes: Button CSS classes.
+- button_icon_position: Icon position, ‘none’, ‘left’, and ‘right’.
