@@ -1,0 +1,56 @@
+---
+title: Quick View JavaScript Events
+sidebarTitle: JavaScript Events
+---
+
+# JavaScript Events
+
+We have added some javascript event API since `v1.2.8`.
+
+## Event: modal opened
+
+The following event is fired when the addonify quick view modal is opened.
+
+```javascript showLineNumbers filename="app.js"
+// Vanilla
+document.addEventListener('addonifyQuickViewModalOpened', (e) => {
+	// Your custom code here.
+});
+
+// jQuery
+$(document).on('addonifyQuickViewModalOpened', (e) => {
+	// Your custom code here.
+});
+```
+
+## Event: modal content loaded
+
+Once the modal content is loaded/hydrated after the AJAX call this event is fired.
+
+```javascript showLineNumbers filename="app.js"
+// Vanilla
+document.addEventListener('addonifyQuickViewModalContentLoded', (e, eventData) => {
+  // Your custom code here.
+});
+
+// jQuery
+$(document).on('addonifyQuickViewModalContentLoded', (e, eventData) => {
+  // Your custom code here.
+});
+```
+
+## Event: modal closed
+
+The following event is fired when the modal is closed.
+
+```javascript showLineNumbers filename="app.js"
+// Vanilla
+document.addEventListener('addonifyQuickViewModalClosed', (e) => {
+	// Your custom code here.
+});
+
+// jQuery
+$(document).on('addonifyQuickViewModalClosed', (e) => {
+	// Your custom code here.
+});
+```

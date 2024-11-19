@@ -18,22 +18,38 @@ export default {
 			"quick-view": {
 				type: "page",
 				title: "Quick view",
-				href: "https://docs.addonify.com/kb/quick-view/",
+				href: "/kb/quick-view/",
 			},
 			wishlist: {
 				type: "page",
 				title: "Wishlist",
-				href: "https://docs.addonify.com/kb/wishlist/",
+				href: "/kb/wishlist/",
 			},
 			"floating-cart": {
 				type: "page",
 				title: "Floating Cart",
-				href: "https://docs.addonify.com/kb/floating-cart/",
+				href: "/kb/floating-cart/",
 			},
 			"compare-products": {
 				type: "page",
 				title: "Compare Products",
-				href: "https://docs.addonify.com/kb/compare-products/",
+				href: "/kb/compare-products/",
+			},
+		},
+	},
+	general: {
+		type: "menu",
+		title: "General",
+		items: {
+			support: {
+				type: "page",
+				title: "Support",
+				href: "/kb/support/",
+			},
+			license: {
+				type: "page",
+				title: "License",
+				href: "/kb/license/",
 			},
 		},
 	},

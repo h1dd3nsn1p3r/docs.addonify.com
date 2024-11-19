@@ -10,6 +10,7 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ["Inter", "sans-serif"],
+				mono: ["DM Mono", "monospace"],
 				serif: ["Georgia", "Cambria", "Times New Roman", "Times", "serif"],
 				system: ["Helvetica", "Arial", "system-ui", "sans-serif"],
 			},
