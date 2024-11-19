@@ -72,23 +72,23 @@ export default {
 				<path
 					d="M12 13.2228C12.6753 13.2228 13.2228 12.6753 13.2228 12C13.2228 11.3246 12.6753 10.7772 12 10.7772C11.3246 10.7772 10.7772 11.3246 10.7772 12C10.7772 12.6753 11.3246 13.2228 12 13.2228Z"
 					stroke="#2563EB"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeWidth="2"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				/>
 				<path
 					d="M22.0272 22.0272C24.5218 19.5449 22.0517 13.0272 16.5245 7.47551C10.9728 1.9483 4.45511 -0.521828 1.97275 1.97275C-0.521828 4.45511 1.9483 10.9728 7.47551 16.5245C13.0272 22.0517 19.5449 24.5218 22.0272 22.0272Z"
 					stroke="#2563EB"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeWidth="2"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				/>
 				<path
 					d="M16.5245 16.5245C22.0517 10.9728 24.5218 4.45511 22.0272 1.97275C19.5449 -0.521828 13.0272 1.9483 7.47551 7.47551C1.9483 13.0272 -0.521828 19.5449 1.97275 22.0272C4.45511 24.5218 10.9728 22.0517 16.5245 16.5245Z"
 					stroke="#2563EB"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeWidth="2"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				/>
 			</svg>
 		</>
@@ -102,6 +102,22 @@ export default {
 		autoCollapse: true,
 		defaultMenuCollapseLevel: 1,
 	},
-	docsRepositoryBase:
-		"https://github.com/h1dd3nsn1p3r/docs.addonify.com/tree/stable/",
+	footer: {
+		content() {
+			const date = new Date().getFullYear();
+
+			return (
+				<div className="w-full flex items-center justify-center gap-2 relative text-sm text-center">
+					© {date}{" "}
+					<a
+						target="_blank"
+						href="https://addonify.com"
+						className="ms-2 inline-flex items-center text-blue-500 hover:text-blue-600"
+					>
+						Addonify Docs ↗
+					</a>
+				</div>
+			);
+		},
+	},
 };

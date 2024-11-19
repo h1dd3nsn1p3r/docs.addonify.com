@@ -4,4 +4,5 @@ export default {
 	button: "Button",
 	modal: "Modal",
 	"product-navigation": "Product navigation",
+	developer: "Developer",
 };

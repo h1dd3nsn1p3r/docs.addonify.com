@@ -1,5 +1,8 @@
 export default {
 	index: "",
+	/**
+	 * Products.
+	 */
 	"-- Products": {
 		type: "separator",
 		title: "Products",
@@ -7,16 +10,29 @@ export default {
 	"quick-view": "",
 	wishlist: "",
 
-	"-- Resources": {
+	/**
+	 * General.
+	 */
+	"-- General": {
 		type: "separator",
-		title: "Resources",
+		title: "General",
 	},
-	"cream-code-about": {
+	support: "Support",
+	license: "License",
+
+	/**
+	 * Company.
+	 */
+	"-- Company": {
+		type: "separator",
+		title: "Company",
+	},
+	"cream-code-link": {
 		title: "About ↗",
 		href: "https://creamcode.org/about/",
 		newWindow: true,
 	},
-	"company-link": {
+	"addonify-link": {
 		title: "Addonify ↗",
 		href: "https://addonify.com/",
 		newWindow: true,

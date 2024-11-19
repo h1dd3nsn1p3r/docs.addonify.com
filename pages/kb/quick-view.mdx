@@ -3,6 +3,22 @@ title: Addonify Quick View
 sidebarTitle: Quick View
 ---
 
-# Addonify Quick View Catalog
+import { Cable, Settings, MousePointerClick, AppWindow, Signpost, Code } from "lucide-react";
+
+import Card from "@components/global/Card";
+import Cards from "@components/global/Cards";
+
+# Addonify quick view docs
 
 Addonify Quick View is a powerful app that allows your customers to quickly view product details without leaving the current page. It helps to reduce the number of clicks and improves the user experience.
+
+Below are the topics related to Addonify Quick View:
+
+<Cards>
+	<Card icon={<Cable size="26" strokeWidth={1} />} title="Installation" link="/kb/quick-view/installation" />
+	<Card icon={<Settings size="26" strokeWidth={1} />} title="Setting page" link="/kb/quick-view/settings" />
+	<Card icon={<MousePointerClick size="26" strokeWidth={1} />} title="Button customization" link="/kb/quick-view/button" />
+	<Card icon={<AppWindow size="26" strokeWidth={1} />} title="Modal customization" link="/kb/quick-view/modal" />
+	<Card icon={<Signpost size="26" strokeWidth={1} />} title="Product navigation" link="/kb/quick-view/product-navigation" />
+	<Card icon={<Code size="26" strokeWidth={1} />} title="Developer" link="/kb/quick-view/developer" />
+</Cards>
