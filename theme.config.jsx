@@ -58,7 +58,7 @@ export default {
 	},
 	logo: <Logo />,
 	darkMode: true,
-	project: false,
+	project: "",
 	editLink: false,
 	feedback: false,
 	sidebar: {
@@ -66,7 +66,8 @@ export default {
 		autoCollapse: true,
 		defaultMenuCollapseLevel: 1,
 	},
-	docsRepositoryBase: false,
+	docsRepositoryBase:
+		"https://github.com/addonify/docs.addonify.com/tree/stable/kb",
 	footer: {
 		content() {
 			const date = new Date().getFullYear();
