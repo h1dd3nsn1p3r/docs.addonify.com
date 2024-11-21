@@ -9,6 +9,8 @@ export default {
 	},
 	"quick-view": "",
 	wishlist: "",
+	"floating-cart": "",
+	"compare-products": "",
 
 	/**
 	 * General.
