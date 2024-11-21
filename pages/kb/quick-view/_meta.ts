@@ -6,5 +6,7 @@ export default {
 	modal: "Modal",
 	product: "product",
 	"product-navigation": "Product navigation",
+	"related-product": "Related product",
+	"social-share": "Social Share",
 	developer: "Developer",
 };
