@@ -11,11 +11,9 @@ Addonify Quick View also supports custom quick view button. Below is the markup 
 <button class="addonify-qvm-button" data-product_id="{product_id}">{button_label}</button>
 ```
 
-You can add custom CSS classes, but addonify-qvm-button is a necessary CSS class that is used to fire the quick view popup modal.
+You can add custom CSS classes, but make sure to add `addonify-qvm-button` class name as it is a required. You also need to provide ID of WooCommerce product in the attribute `data-product_id`. 
 
-You also need to provide ID of WooCommerce product in the attribute data-product_id.
-
-You can have your own button label. But if you wish to have the button label from the Addonify Quick View plugin’s setting page, use the code below:
+You can have your own button label too. If you wish to have the button label from the Addonify Quick View plugin’s setting page, use the code below:
 
 ```php showLineNumbers filename="public.php"
 <?php
@@ -43,4 +41,4 @@ You can easily hide it with the help of CSS. Below is the example code snippet.
 }
 ```
 
-Hence, except custom button, none of the addonify quick view public assets gets initialized when disable on mobile is enabled & mobile user agent is detected. We are using this [open source library](https://github.com/serbanghita/Mobile-Detect) to detect the mobile device.
+Hence, except custom button, none of the addonify quick view public assets gets initialized when disable on mobile is enabled & mobile user agent is detected. 
