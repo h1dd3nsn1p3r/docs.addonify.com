@@ -1,3 +1,4 @@
+import { Globe } from "lucide-react";
 import { useRouter } from "next/router";
 import { useConfig } from "nextra-theme-docs";
 
@@ -58,7 +59,10 @@ export default {
 	},
 	logo: <Logo />,
 	darkMode: true,
-	project: "",
+	project: {
+		link: "https://addonify.com",
+		icon: <Globe size={24} />,
+	},
 	editLink: false,
 	feedback: false,
 	sidebar: {
