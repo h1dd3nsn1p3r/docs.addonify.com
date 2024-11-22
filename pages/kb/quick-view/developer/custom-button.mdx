@@ -21,24 +21,4 @@ get_option( 'addonify_qv_quick_view_btn_label' );
 ?>
 ```
 
-## Disable on mobile devices
-
-We have added the option to disable quick view on a mobile device since version `1.1.1`. If the disable option for a mobile device is checked in the addonify quick view dashboard setting page, `addonify-quick-view-disabled` class is added to the body.
-
-You can easily hide it with the help of CSS. Below is the example code snippet.
-
-```css showLineNumbers filename="style.css"
-/* Example 1: only devices <= 575px */
-@media ( max-width: 575px ) {
-	.addonify-quick-view-disabled .your-custom-quick-view-button {
-			display: none; /* Hide */
-	}
-}
-
-/* Example 2: or even globally */
-.addonify-quick-view-disabled .your-custom-quick-view-button {
-  display: none; /* Hide */
-}
-```
-
 Hence, except custom button, none of the addonify quick view public assets gets initialized when disable on mobile is enabled & mobile user agent is detected. 
