@@ -34,8 +34,8 @@ export default function Logo(): JSX.Element {
 						y2="228.333"
 						gradientUnits="userSpaceOnUse"
 					>
-						<stop stop-color="#177DF3" />
-						<stop offset="1" stop-color="#0A38A5" />
+						<stop stopColor="#177DF3" />
+						<stop offset="1" stopColor="#0A38A5" />
 					</linearGradient>
 					<linearGradient
 						id="paint1_linear_3929_798"
@@ -45,9 +45,9 @@ export default function Logo(): JSX.Element {
 						y2="221"
 						gradientUnits="userSpaceOnUse"
 					>
-						<stop offset="0.0833333" stop-color="#0847D9" />
-						<stop offset="0.502991" stop-color="white" />
-						<stop offset="0.9375" stop-color="#0847D9" />
+						<stop offset="0.0833333" stopColor="#0847D9" />
+						<stop offset="0.502991" stopColor="white" />
+						<stop offset="0.9375" stopColor="#0847D9" />
 					</linearGradient>
 				</defs>
 			</svg>
