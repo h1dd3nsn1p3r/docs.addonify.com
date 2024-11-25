@@ -1,8 +1,73 @@
 ---
-title: Introduction
+title: Documentation & Knowledge Base
 sidebarTitle: Introduction
 ---
 
-# Introduction
+import { 
+Key,
+Heart,
+Layers,
+Search,
+Headphones,
+ShoppingCart
+} from "lucide-react";
 
-This is an introduction to the knowledge base. It is a very important topic and you should read it carefully.
+import Card from "@components/global/Card";
+import Cards from "@components/global/Cards";
+
+# Documentation & knowledge base
+
+Welcome to the [Addonify](https://addonify.com) user/developer documentation and knowledge base site. Here you will find all the information you need to get started with Addonify products. If you accidentally landed here, you can visit the [main site here](https://addonify.com). 
+
+Let's explore the topics that we cover in this documentation site.
+
+## Product docs
+
+This documentation and knowledge sites includes documentation for the following products:
+
+<Cards>
+	<Card 
+		title="Quick view" 
+		link="/kb/quick-view" 
+		icon={<Search size="26" strokeWidth={1} />} 
+	/>
+
+	<Card 
+		title="Wishlist" 
+		link="/kb/wishlist" 
+		icon={<Heart size="26" strokeWidth={1} />} 
+	/>
+
+	<Card 
+		title="Compare products" 
+		link="/kb/compare-products" 
+		icon={<Layers size="26" strokeWidth={1} />} 
+	/>
+
+	<Card 
+		title="Floating cart" 
+		link="/kb/floating-cart" 
+		icon={<ShoppingCart size="26" strokeWidth={1} />} 
+	/>
+</Cards>
+
+## General topics
+
+In addition to product documentation, we also have general topics that cover various aspects.
+
+<Cards>
+	<Card 
+		title="License management" 
+		link="/kb/license" 
+		icon={<Key size="26" strokeWidth={1} />} 
+	/>
+
+	<Card 
+		title="Get support" 
+		link="/kb/support" 
+		icon={<Headphones size="26" strokeWidth={1} />} 
+	/>
+</Cards>
+
+
+
