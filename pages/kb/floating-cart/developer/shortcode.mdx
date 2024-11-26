@@ -11,6 +11,15 @@ Addonify Floating Cart provides a shortcode that allows you to display the float
 [afc_cart_icon id="my-id" class="css-classes" icon="icon_6" display_items_count="true" items_count_position="top-right"]
 ```
 
+Print the shortcode content using the [do_shortcode function](https://developer.wordpress.org/reference/functions/do_shortcode/).
+
+```php showLineNumbers file="template.php"
+<?php
+
+// print the shortcode content.
+echo do_shortcode('[afc_cart_icon id="my-id" class="css-classes" icon="icon_6" display_items_count="true" items_count_position="top-right"]');
+```
+
 Following are the shortcode attributes that you can use:
 
 - **id**: This attribute assigns a unique ID to the cart icon. It can be used for specific styling or JavaScript targeting.
