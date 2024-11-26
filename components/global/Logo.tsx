@@ -21,7 +21,7 @@ export default function Logo(): JSX.Element {
 				/>
 				<path
 					fill-rule="evenodd"
-					clip-rule="evenodd"
+					clipRule="evenodd"
 					d="M103.297 117.64L45.6719 241.948L142.558 91.272L86.5529 99.611L139.926 0L47.9659 123.57L103.297 117.64Z"
 					fill="url(#paint1_linear_3929_798)"
 				/>
