@@ -1,0 +1,404 @@
+---
+title: Addonify Floating JavaScript API
+sidebarTitle: JavaScript API
+---
+
+# JavaScript API
+
+We have few javaScript methods and events in addonify floating cart that can be used where required.
+
+## Methods
+
+### open
+
+Display addonify floating cart canvas/modal/panel programmatically when required.
+
+```javascript showLineNumbers filename="script.js"
+<script>
+addonifyFloatingCart.action.cart.open();
+</script>
+```
+
+Below is the jQuery example to open the floating cart on button click.
+
+```javascript showLineNumbers filename="script.js"
+<script>
+(function ($) {
+	$(document).ready(function () {
+
+		$("#your-btn-ele").on("click", (e) => {
+			e.preventDefault();
+				// Open cart.
+			addonifyFloatingCart.action.cart.open();
+    })
+ 	});
+})(jQuery);
+</script>
+```
+
+Here's the example to open the floating cart on button click using vanilla JavaScript.
+
+```javascript showLineNumbers filename="script.js"
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	const ele = document.getElementById("your-btn-ele");
+
+	if (ele) {
+		ele.addEventListener("click", function (e) {
+			e.preventDefault();
+			addonifyFloatingCart.action.cart.open();
+		});
+	}
+});
+</script>
+```
+
+### close
+
+Close the addonify floating cart canvas/modal/panel programmatically when required.
+
+```javascript showLineNumbers filename="script.js"
+<script>
+addonifyFloatingCart.action.cart.close();
+</script>
+```
+
+Here's the jQuery example to close the floating cart on button click.
+
+```javascript showLineNumbers filename="script.js"
+<script>
+(function ($) {
+	$(document).ready(function () {
+
+		$("#your-btn-ele").on("click", (e) => {
+			e.preventDefault();
+				// Close cart.
+			addonifyFloatingCart.action.cart.close();
+		})
+ 	});
+})(jQuery);
+</script>
+```
+
+Here's the example to close the floating cart on button click using vanilla JavaScript.
+
+```javascript showLineNumbers filename="script.js"
+<script>
+const ele = document.getElementById("your-btn-ele");
+
+if (ele) {
+	ele.addEventListener("click", function (e) {
+		e.preventDefault();
+		addonifyFloatingCart.action.cart.close();
+	});
+}
+</script>
+```
+
+### refresh
+
+Programmatically refresh the cart via AJAX call if required.
+
+In this example, we will invoke the addonify floating cart refresh method when a custom event i.e. `fooEvent` is dispatched.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("fooEvent", function () {
+		addonifyFloatingCart.action.cart.refresh();
+	});
+});
+</script>
+```
+
+**Note:** As always, you can refresh the addonify floating cart on any built-in JavaScript event too. refresh method is an async method. It returns a promise. If you wish to catch any error.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("fooEvent", function () {
+		addonifyFloatingCart.action.cart.refresh().then(() => {
+			console.log("Cart refreshed successfully.");
+		}).catch((error) => {
+			console.error("Error refreshing cart.", error);
+		});
+	});
+});
+</script>
+```
+
+## Events
+
+Addonify floating cart also dispatch events. You can listen to these events if required. All the events that are dispatched can be listened to by using jQuery or vanilla JS code block in the DOM.
+
+### Cart opened
+
+This event is dispatched when the floating cart is opened.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("addonifyFloatingCartOpened", function () {
+		console.log("Cart opened.");
+		// logic here.
+	});
+});
+</script>
+```
+
+Listening to the open event using jQuery.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+(function ($) {
+	$(document).ready(function () {
+		$(document).on("addonifyFloatingCartOpened", function () {
+			console.log("Cart opened.");
+			// logic here.
+		});
+	});
+})(jQuery);
+</script>
+```
+
+### Cart closed
+
+This event is dispatched when the floating cart is closed.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("addonifyFloatingCartClosed", function () {
+		console.log("Cart closed.");
+		// logic here.
+	});
+});
+</script>
+```
+
+Listening to the close event using jQuery.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+(function ($) {
+	$(document).ready(function () {
+		$(document).on("addonifyFloatingCartClosed", function () {
+			console.log("Cart closed.");
+			// logic here.
+		});
+	});
+})(jQuery);
+</script>
+```
+
+### Cart updated
+
+This event is dispatched when the floating cart is updated.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("addonifyFloatingCartUpdated", function () {
+		console.log("Cart updated.");
+		// logic here.
+	});
+});
+</script>
+```
+
+Listening to the update event using jQuery.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+(function ($) {
+	$(document).ready(function () {
+		$(document).on("addonifyFloatingCartUpdated", function () {
+			console.log("Cart updated.");
+			// logic here.
+		});
+	});
+})(jQuery);
+</script>
+```
+
+### Cart emptied
+
+This event is dispatched when the floating cart is empty.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("addonifyFloatingCartEmptied", function () {
+		console.log("Cart empty.");
+		// logic here.
+	});
+});
+</script>
+```
+
+Listening to the empty event using jQuery.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+(function ($) {
+	$(document).ready(function () {
+		$(document).on("addonifyFloatingCartEmptied", function () {
+			console.log("Cart empty.");
+			// logic here.
+		});
+	});
+})(jQuery);
+</script>
+```
+
+### Product removed
+
+This event is dispatched when a product is removed from the floating cart.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("addonifyFloatingCartProductRemoved", function () {
+		console.log("Product removed.");
+		// logic here.
+	});
+});
+</script>
+```
+
+### Product restored
+
+This event is dispatched when a product was removed initially and then restored back using the undo button.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("addonifyFloatingCartProductRestored", function () {
+		console.log("Product restored.");
+		// logic here.
+	});
+});
+</script>
+```
+
+### Coupon model opened
+
+This event is dispatched when the coupon model is opened.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("addonifyFloatingCartCouponModalOpened", function () {
+		console.log("Coupon model opened.");
+		// logic here.
+	});
+});
+</script>
+```
+
+### Coupon model closed
+
+This event is dispatched when the coupon model is closed.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("addonifyFloatingCartCouponModalClosed", function () {
+		console.log("Coupon model closed.");
+		// logic here.
+	});
+});
+</script>
+```
+
+### Coupon applied
+
+This event is dispatched when a coupon is applied.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("addonifyFloatingCartCouponApplied", function () {
+		console.log("Coupon applied.");
+		// logic here.
+	});
+});
+</script>
+```
+
+### Coupon removed
+
+This event is dispatched when a coupon is removed.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("addonifyFloatingCartCouponRemoved", function () {
+		console.log("Coupon removed.");
+		// logic here.
+	});
+});
+</script>
+```
+
+### Shipping model opened
+
+This event is dispatched when the shipping model is opened.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("addonifyFloatingCartShippingModalOpened", function () {
+		console.log("Shipping model opened.");
+		// logic here.
+	});
+});
+</script>
+```
+
+### Shipping model closed
+
+This event is dispatched when the shipping model is closed.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("addonifyFloatingCartShippingModalClosed", function () {
+		console.log("Shipping model closed.");
+		// logic here.
+	});
+});
+</script>
+```
+
+### Shipping address updated
+
+This event is dispatched when the shipping address is changed.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("addonifyFloatingCartShippingAddressUpdated", function () {
+		console.log("Shipping address updated.");
+		// logic here.
+	});
+});
+</script>
+```
+
+### Shopping meter threshold reached
+
+This event is dispatched when the shopping meter threshold is reached.
+
+```javascript showLineNumbers filename="app.js"
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("addonifyFloatingCartShoppingMeterThresholdReached", function () {
+		console.log("Shopping meter threshold reached.");
+		// logic here.
+	});
+});
+</script>
+```
+
+

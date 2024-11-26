@@ -6,6 +6,6 @@ export default {
 	modal: "Modal",
 	coupon: "Coupon",
 	shipping: "Shipping",
-	"shipping-meter": "Shipping meter",
+	"shopping-meter": "Shopping meter",
 	"action-notification": "Action notification",
 };
