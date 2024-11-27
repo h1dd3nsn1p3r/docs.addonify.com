@@ -5,6 +5,7 @@ export default {
 	button: "Button customization",
 	modal: "Modal customization",
 	product: "Product customization",
+	analytics: "Analytics",
 	"product-navigation": "Product navigation",
 	"related-product": "Related product",
 	"social-share": "Social Share",
