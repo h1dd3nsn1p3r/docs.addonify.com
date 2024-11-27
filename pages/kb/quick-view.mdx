@@ -7,10 +7,13 @@ import {
 Code,
 Cable, 
 Image,
+Share2,
 Settings, 
 Signpost, 
 AppWindow, 
-MousePointerClick
+ChartArea,
+LayoutPanelTop,
+MousePointerClick,
 } from "lucide-react";
 
 import Card from "@components/global/Card";
@@ -56,9 +59,27 @@ Explore the topics below to get started.
 	/>
 
 	<Card 
+		title="Analytics" 
+		link="/kb/quick-view/analytics" 
+		icon={<ChartArea size="26" strokeWidth={1} />} 
+	/>
+
+	<Card 
 		title="Product navigation" 
 		link="/kb/quick-view/product-navigation" 
 		icon={<Signpost size="26" strokeWidth={1} />} 
+	/>
+
+	<Card 
+		title="Related products" 
+		link="/kb/quick-view/related-product" 
+		icon={<LayoutPanelTop size="26" strokeWidth={1} />} 
+	/>
+
+	<Card 
+		title="Social share" 
+		link="/kb/quick-view/social-share" 
+		icon={<Share2 size="26" strokeWidth={1} />} 
 	/>
 
 	<Card 
