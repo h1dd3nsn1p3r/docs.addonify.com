@@ -11,7 +11,21 @@ Some of the helper functions are as follows:
 
 
 
-[![Hook example](/products/compare-products/useful-functions.png)](/products/compare-products/useful-functions.png)
+```PHP
+<?php
+	// Function to get all items in the compare.
+	addonify_compare_products_get_compare_cookie();
+
+	// Function to get number of items compare list count.
+	addonify_compare_products_get_compare_cookie_count();
+
+	// Function to check if a product is in compare list. $product_id is required.
+	addonify_compare_products_is_product_in_compare_cookie( $product_id );
+
+	//Function to check if compare list is empty.
+	addonify_compare_products_is_empty_compare_cookie();
+?>
+```
 
 
 Didn't find what you looking for? Try sending your questions from our contact page.
