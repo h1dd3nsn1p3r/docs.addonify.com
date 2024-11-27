@@ -11,14 +11,19 @@ sidebarTitle: Shortcode
 
 This shortcode is used for displaying products comparison table.
 
+``` PHP
+[addonify_compare_products]
+```
 
-[![Shortcode example](/products/compare-products/shortcode.png)](/products/compare-products/shortcode.png)
 
 
+This shortcode is used for displaying compare button. The shortcode accepts four parameters:
+
+``` PHP
 
 [addonify_compare_button]
 
-This shortcode is used for displaying compare button. The shortcode accepts four parameters:
+```
 
 1. product_id – used for passing the ID of a WooCommerce product. If the shortcode is being used outside of a product loop, then the parameter is required.
 2. button_label – used for passing the label to the button.
@@ -28,7 +33,14 @@ This shortcode is used for displaying compare button. The shortcode accepts four
 
 An example of compare button shortcode with four parameters is as below:
 
-[![Shortcode example](/products/compare-products/shortcode1.png)](/products/compare-products/shortcode1.png)
+
+```
+PHP
+1
+[addonify_compare_button product_id="1" button_label="Compare" 
+classes="class-one class-two class-three" button_icon_position="left"]
+
+```
 
 
 
