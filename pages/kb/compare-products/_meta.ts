@@ -3,6 +3,6 @@ export default {
 	settings: "Settings page",
 	general: "General options",
 	"compare-button": "Compare button",
-	"comparision-table": "Comparision table",
+	"comparison-table": "Comparison table",
 	design: "Design",
 };
