@@ -1,0 +1,43 @@
+---
+title: Addonify Floating Hooks
+sidebarTitle: Hooks
+---
+
+# Hooks
+
+A hook is an easier way for developer to add custom functionality into WordPress themes and plugins. Addonify Floating Cart has multiple hooks that theme author can use to modify plugin content on the fly.
+
+Action hooks used for overriding floating cart content.
+
+```php showLineNumbers file="function.php"
+addonify_floating_cart_sidebar_cart_header
+addonify_floating_cart_sidebar_cart_shipping_bar
+addonify_floating_cart_sidebar_cart_notice
+addonify_floating_cart_sidebar_cart_body
+addonify_floating_cart_sidebar_cart_footer
+addonify_floating_cart_sidebar_cart_coupon
+addonify_floating_cart_sidebar_cart_applied_coupons
+addonify_floating_cart_cart_footer_button
+```
+
+Action hooks used for overriding product parts:
+
+```php showLineNumbers file="function.php"
+addonify_floating_cart_product_image
+addonify_floating_cart_product_quantity_field
+addonify_floating_cart_product_quantity_price
+addonify_floating_cart_product_title
+```
+
+Other filters and hooks are:
+
+```php showLineNumbers file="function.php"
+addonify_floating_cart_click_to_apply_button_label
+addonify_floating_cart_have_a_coupon_label
+addonify_floating_cart_sub_total_label
+addonify_floating_cart_discount_label
+addonify_floating_cart_total_label
+addonify_floating_cart_go_back_from_coupon_label
+addonify_floating_cart_coupon_code_field_label
+addonify_floating_cart_applied_coupon_label
+```

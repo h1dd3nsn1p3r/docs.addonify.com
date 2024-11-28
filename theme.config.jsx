@@ -1,3 +1,4 @@
+import { Globe } from "lucide-react";
 import { useRouter } from "next/router";
 import { useConfig } from "nextra-theme-docs";
 
@@ -15,11 +16,9 @@ export default {
 
 		const { route } = useRouter();
 
-		const isDefault = route === "/" || !config.title;
-
-		const image =
-			"https://docs.addonify.com/" +
-			(isDefault ? "og.jpeg" : `/og?title=${config.title}`);
+		const og =
+			"https://docs.addonify.com/og.png?" +
+			`title=${config.title || "Addonify Docs"}`;
 
 		const description = config.frontMatter.description || "";
 
@@ -31,7 +30,7 @@ export default {
 				<meta property="og:title" content={title} />
 				<meta name="description" content={description} />
 				<meta property="og:description" content={description} />
-				<meta property="og:image" content={image} />
+				<meta property="og:image" content={og} />
 
 				<meta name="msapplication-TileColor" content="#FFFFFF" />
 				<meta httpEquiv="Content-Language" content="en" />
@@ -58,7 +57,10 @@ export default {
 	},
 	logo: <Logo />,
 	darkMode: true,
-	project: "",
+	project: {
+		link: "https://addonify.com",
+		icon: <Globe size={24} />,
+	},
 	editLink: false,
 	feedback: false,
 	sidebar: {

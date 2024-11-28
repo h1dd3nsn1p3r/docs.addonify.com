@@ -1,0 +1,25 @@
+---
+title: Addonify Compare Products Useful Functions
+sidebarTitle: Useful functions
+---
+
+# Useful functions
+
+Addonify Compare Products has defined some useful helper functions that you may want to use. The helper functions could be found inside inc/addonify-compare-products-helper-functions.php file.
+
+Some of the helper functions are as follows:
+
+```php showLineNumbers filename="func.php"
+<?php
+	// Function to get all items in the compare.
+	addonify_compare_products_get_compare_cookie();
+
+	// Function to get number of items compare list count.
+	addonify_compare_products_get_compare_cookie_count();
+
+	// Function to check if a product is in compare list. $product_id is required.
+	addonify_compare_products_is_product_in_compare_cookie( $product_id );
+
+	//Function to check if compare list is empty.
+	addonify_compare_products_is_empty_compare_cookie();
+```

@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 :root {
-	--brand: #2563EB;
+	--brand: #2563eb;
 }
 
 .nextra-code {
 	@apply font-mono;
 }
 
-.nextra-sidebar-container .\[\&\:not\(\:first-child\)\]\:_mt-5:not(:first-child) {
-	@apply font-semibold uppercase tracking-[2px] text-gray-800 bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-cyan-500 dark:bg-gradient-to-r dark:from-yellow-200 dark:to-green-500;
+.nextra-sidebar-container
+	.\[\&\:not\(\:first-child\)\]\:_mt-5:not(:first-child) {
+	@apply font-semibold uppercase tracking-[2px] text-gray-800 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-cyan-500 dark:bg-gradient-to-r dark:from-yellow-200 dark:to-green-500;
 }

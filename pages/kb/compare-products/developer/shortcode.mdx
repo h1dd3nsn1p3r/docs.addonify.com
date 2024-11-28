@@ -1,0 +1,44 @@
+---
+title: Addonify Compare Products Shortcode
+sidebarTitle: Shortcode
+---
+
+# Shortcode
+
+We have two shortcodes for the Addonify Compare Products plugin. The first shortcode is used for displaying the products comparison table, and the second shortcode is used for displaying the compare button.
+
+## Comparison table
+
+This shortcode is used for displaying products comparison table.
+
+```php
+[addonify_compare_products]
+```
+
+Example: 
+
+```php showLineNumbers filename="shortcode.php"
+<?php
+echo do_shortcode('[addonify_compare_products]');
+```
+
+## Compare button
+
+This shortcode is used for displaying compare button. The shortcode accepts four parameters:
+
+```php
+[addonify_compare_button]
+```
+
+- product_id – used for passing the ID of a WooCommerce product. If the shortcode is being used outside of a product loop, then the parameter is required.
+- button_label – used for passing the label to the button.
+- classes – used for passing additional CSS class(es) to the button. When passing the CSS class(es), the CSS classes should be separated by a space.
+- button_icon_position – used for displaying icon and specifying it’s location in the button. The value for the parameter should be either ‘left‘, ‘right‘, or ‘none‘.
+
+An example of compare button shortcode with four parameters is as below:
+
+```php showLineNumbers filename="shortcode.php"
+<?php
+
+echo do_shortcode('[addonify_compare_button product_id="123" button_label="Add to Compare" classes="btn btn-primary" button_icon_position="left"]');
+```

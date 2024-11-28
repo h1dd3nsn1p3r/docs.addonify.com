@@ -1,0 +1,37 @@
+---
+title: Addonify Compare Products Hooks
+sidebarTitle: Hooks
+---
+
+# Hooks
+
+
+A hook is an easier way for developer to add custom functionality into WordPress themes and plugins. Addonify Compare Products has multiple hooks that theme author can use to modify plugin content on the fly.
+
+Action hooks used for overriding floating cart content.
+
+```php showLineNumbers filename="function.php"
+addonify_compare_products/compare_button
+addonify_compare_products/docker_modal
+addonify_compare_products/docker_message
+addonify_compare_products/docker_content
+addonify_compare_products/docker_add_button
+addonify_compare_products/docker_compare_button
+addonify_compare_products/search_modal
+addonify_compare_products/search_result
+addonify_compare_products/comparison_modal
+addonify_compare_products/comparison_content
+```
+
+Below is an example of how to use the hook in your [theme or plugin](https://developer.wordpress.org/plugins/hooks/).
+
+```php showLineNumbers filename="example.php"
+<?php
+
+add_action( 'addonify_compare_products/compare_button', 'your_function_name' );
+
+function your_function_name() {
+	// Your code
+}
+```
+

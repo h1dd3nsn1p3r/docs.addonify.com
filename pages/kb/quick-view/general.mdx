@@ -6,26 +6,45 @@ sidebarTitle: General options
 # Quick view general options
 
 
-##### Enable quick view
+## Enable quick view
 
 Enable or disable quick view feature.
 
-##### Disable on mobile devices
+## Disable on mobile devices
 
-Enable or disable quick view on moblie device.
+We have added the option to disable `quick view` on a mobile device since version `1.1.1`. If the disable option for a mobile device is checked in the addonify quick view dashboard setting page, `addonify-quick-view-disabled` class is added to the body.
 
-##### Hide quick view button for product categories ( pro )
+You can easily hide it with the help of CSS. Below is the example code snippet.
 
-The 'Quick View' button will be hidden for selected product categories.
+```css showLineNumbers filename="style.css"
+/* Example 1: only devices <= 575px */
+@media ( max-width: 575px ) {
+	.addonify-quick-view-disabled .your-custom-quick-view-button {
+			display: none; /* Hide */
+	}
+}
 
-##### Enable AJAX add to cart ( pro )
+/* Example 2: or even globally */
+.addonify-quick-view-disabled .your-custom-quick-view-button {
+  display: none; /* Hide */
+}
+```
 
-AJAX will be enabled for the 'Add to Cart' button inside the modal box.
 
-##### Action after AJAX add to cart ( pro )
+## Hide quick view button for product categories ( pro )
 
-Choose the action to take after the 'Add to Cart' button is triggered.
+If you do not want the `Quick View` button to appear for one or more product categories, select the desired categories here.
 
-##### Enable products view count ( pro )
+## Enable AJAX add to cart ( pro )
+AJAX will be enabled for the `Add to Cart` button inside the modal box, allowing the product to be added to the cart without reloading the page.
 
-Enables products view count for all products.
+## Action after AJAX add to cart ( pro )
+
+Choose the action to perform after a product is added to the cart. There are three options: None, Redirect to Cart page, and Redirect to Checkout Page.
+
+
+
+## Enable products view count ( pro )
+
+
+By enabling this feature, the product view count is stored in the database and can be used for analytical tools.
