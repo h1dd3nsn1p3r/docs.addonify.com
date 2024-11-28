@@ -17,6 +17,36 @@ import { GoPro } from "@components/global/GoPro"
 
 Quick view analytics feature allows you to track the user interaction with the quick view modal. You can track the number of times the product was viewed. This feature helps you to understand the user behavior and make data-driven decisions.
 
+## Total views count (pro)
+
+Total views count shows the total number of times the product was viewed in a single day or a specific date range.
+
+[![Total products view count](/products/quick-view/analytics-1.png)](/products/quick-view/analytics-1.png)
+
+These metrics helps you to understand if the users are interacting with the product. You can use this data to improve the product visibility and user experience. Total views is represented in a graph format for better understanding. The bar graph shows the total views count for each day in the selected date range. 
+
+## Products views count (pro)
+
+Products views count shows the total number of times the product was viewed in a single day or a specific date range. You can filter the products based on the date range. The product views count is updated in real-time.
+
+[![Total products view count](/products/quick-view/analytics-2.png)](/products/quick-view/analytics-2.png)
+
+These metric helps you to understand which product is popular among the users. You can use this data to maintain the stock, adjust the price, offer deals or perform necessary actions to improve the sales. The product views count is represented in a tabular format for better understanding. The table shows the product name, product views count, and the date range.
+
+## How the views are tracked?
+
+When the user click on the quick view button, the view is tracked and stored in the database. The view count is updated in real-time. The view count is stored in the database and can be accessed from the analytics page. Lets assume we have products A, B, C & D. Even though the user views the product A multiple times, the view count is updated only once for that day. The view count is updated based on the user session. If the user views the product A multiple times in a single session, the view count is updated only once. If the user views the product A in a different session, the view count is updated again.
+
+**Note:** Keep in mind, if the user did not viewed the product in a quick view modal but navigates to the product detail page, the view count won't be counted. 
+
+Hence, the view count is updated based on the user session and the click interaction. 
+
+## Limitations
+
+The technique used to track the views is based on the user session. The view count is updated only once for a single session. The view count is updated again if the user views the product in a different session or browser. This approach of tracking the views is to avoid the duplicate views and provide accurate data. 
+
+On the other hand some store owners might want to track the views each time the user views the product. This feature is not available in the current version. We plan to add this feature in the future updates. If you have any suggestions or feedback, feel free [let us know](https://addonify.com/contact/).
+
 
 ## All product view (pro)
 
