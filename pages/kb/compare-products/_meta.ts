@@ -1,8 +1,8 @@
 export default {
 	installation: "Installation",
 	settings: "Settings page",
-	general: "General options",
-	"compare-button": "Compare button",
+	general: "General",
+	"compare-button": "Button",
 	"comparison-table": "Comparison table",
 	design: "Design",
 };
