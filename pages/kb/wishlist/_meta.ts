@@ -1,7 +1,7 @@
 export default {
 	installation: "Installation",
 	settings: "Settings",
-	general: "General options",
+	general: "General settings",
 	"popup-modal": "Popup modals",
 	button: "Button",
 	page: "Page",
