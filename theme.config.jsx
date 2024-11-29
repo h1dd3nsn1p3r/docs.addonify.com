@@ -16,11 +16,9 @@ export default {
 
 		const { route } = useRouter();
 
-		const isDefault = route === "/" || !config.title;
-
 		const og =
-			"https://docs.addonify.com/" +
-			(isDefault ? "og.png" : `/og?title=${config.title}`);
+			"https://docs.addonify.com/og.png?" +
+			`title=${config.title || "Addonify Docs"}`;
 
 		const description = config.frontMatter.description || "";
 

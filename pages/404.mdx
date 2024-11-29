@@ -1,5 +1,63 @@
-import { NotFoundPage } from 'nextra-theme-docs'
+import { 
+Key,
+Heart,
+Layers,
+Search,
+Headphones,
+ShoppingCart
+} from "lucide-react";
 
-# 404: Page Not Found
+import Card from "@components/global/Card";
+import Cards from "@components/global/Cards";
 
-<NotFoundPage />
+# Oops!
+
+The page you are looking for either has been moved or doesn't exist in this documentation site. Explore the topics that we cover in this documentation site.
+
+## Product docs
+
+Explore the documentation for the following products:
+
+<Cards>
+	<Card 
+		title="Quick view" 
+		link="/kb/quick-view" 
+		icon={<Search size="26" strokeWidth={1} />} 
+	/>
+
+	<Card 
+		title="Wishlist" 
+		link="/kb/wishlist" 
+		icon={<Heart size="26" strokeWidth={1} />} 
+	/>
+
+	<Card 
+		title="Compare products" 
+		link="/kb/compare-products" 
+		icon={<Layers size="26" strokeWidth={1} />} 
+	/>
+
+	<Card 
+		title="Floating cart" 
+		link="/kb/floating-cart" 
+		icon={<ShoppingCart size="26" strokeWidth={1} />} 
+	/>
+</Cards>
+
+## General topics
+
+In addition to product documentation, we also have general topics that cover various aspects.
+
+<Cards>
+	<Card 
+		title="License management" 
+		link="/kb/license" 
+		icon={<Key size="26" strokeWidth={1} />} 
+	/>
+
+	<Card 
+		title="Get support" 
+		link="/kb/support" 
+		icon={<Headphones size="26" strokeWidth={1} />} 
+	/>
+</Cards>
