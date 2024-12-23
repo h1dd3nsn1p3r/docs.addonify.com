@@ -9,7 +9,6 @@ export default function Logo(): JSX.Element {
 		<div className="branding flex items-center gap-x-2">
 			<svg
 				width="30"
-				height="auto"
 				viewBox="0 0 184 242"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
