@@ -1,10 +1,9 @@
 /**
  * Renders a logo.
  *
- * @returns {JSX.Element}
  * @since 1.0.0
  */
-export default function Logo(): JSX.Element {
+export default function Logo() {
 	return (
 		<div className="branding flex items-center gap-x-2">
 			<svg
