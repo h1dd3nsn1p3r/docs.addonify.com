@@ -12,7 +12,7 @@ interface Props {
  * @param param0
  * @returns
  */
-export function GoPro({ title, link, children }: Props): JSX.Element {
+export function GoPro({ title, link, children }: Props) {
 	return (
 		<div
 			role="alert"

@@ -1,15 +1,14 @@
 "use client";
 
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 
 /**
  * Redirect the homepage component.
  *
- * @returns {JSX.Element} The homepage component.
  * @since 1.0.0
  */
-export const Homepage = (): JSX.Element => {
+export const Homepage = () => {
 	const router = useRouter();
 
 	useEffect(() => {
@@ -28,10 +27,9 @@ export const Homepage = (): JSX.Element => {
 /**
  * Redirect loading component.
  *
- * @returns {JSX.Element} The loading component.
  * @since 1.0.0
  */
-const Loading = (): JSX.Element => {
+const Loading = () => {
 	return (
 		<div
 			role="status"

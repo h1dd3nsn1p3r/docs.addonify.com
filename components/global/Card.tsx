@@ -8,10 +8,9 @@ interface Props {
  * Renders a card element with an icon, title and link.
  *
  * @param {Props}
- * @returns {JSX.Element}
  * @since 1.0.0
  */
-export default function Card({ icon, title, link }: Props): JSX.Element {
+export default function Card({ icon, title, link }: Props) {
 	return (
 		<>
 			<a
