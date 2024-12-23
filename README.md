@@ -30,5 +30,9 @@ The documentation is deployed to Cloudflare pages using the wrangler action by G
 
 Hence, you don't need to worry about the deployment process. Just focus on writing the documentation and creating pull requests.
 
+## Changelog
+
+To maintain the changelog version of the documentation, update the version in the `package.json` file. The changes log can be updated in the [GitHub releases](https://github.com/h1dd3nsn1p3r/docs.addonify.com/releases) section while creating the release.
+
 
 
