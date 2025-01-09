@@ -3,6 +3,8 @@ title: Troubleshooting Cache Issue
 sidebarTitle: Troubleshoot Cache
 ---
 
+import { Tabs } from 'nextra/components'
+
 # Troubleshooting cache issue
 
 We all know cache is helpful to speed up our website load time. However, sometimes cache plugins create abnormal behaviour. If you are using Addonify Wishlist & any cache plugin together do not enable the following settings:
@@ -23,15 +25,46 @@ We use cookies to save the selected items in the wishlist. If you are experienci
 
 If your cache plugin is caching the ajax calls made by our plugin you can fix that by excluding it from being cached & combined.
 
-```text
-addonify-wishlist-public.min.js
-```
+<Tabs items={["v2.0.14 & above", "v2.0.13 & below", ]} defaultIndex="0">
+  <Tabs.Tab>
+		If you are using addonify wishlist version `2.0.14` or `above` then the JavaScript files are: 
 
-The complete URL to the Addonify Wishlist public JavaScript file would be:
+		```javascript
+		- guest.min.js
+		- private.min.js
+		```
 
-```text
-http://domain.com/wp-content/plugins/addonify-wishlist/public/assets/build/js/addonify-wishlist-public.min.js
-```
+		The complete URL to the Addonify Wishlist public JavaScript file would be:
+
+		```text
+		http://domain.com/wp-content/plugins/addonify-wishlist/public/assets/build/guest.min.js
+		```
+
+		```text
+		http://domain.com/wp-content/plugins/addonify-wishlist/public/assets/build/private.min.js
+		```
+
+		The `guest.min.js` file is for the guest user and the `private.min.js` file is for the logged-in user.
+	</Tabs.Tab>
+	<Tabs.Tab>
+		If you are using addonify wishlist version `2.0.13` or `below` then the JavaScript files are: 
+
+		```javascript
+		- addonify-wishlist-public.min.js
+		- addonify-wishlist-public-guest.min.js
+		```
+
+		The complete URL to the Addonify Wishlist public JavaScript file would be:
+
+		```text
+		http://domain.com/wp-content/plugins/addonify-wishlist/public/assets/build/js/addonify-wishlist-public.min.js
+		```
+
+		```text
+		http://domain.com/wp-content/plugins/addonify-wishlist/public/assets/build/js/addonify-wishlist-public-guest.min.js
+		```
+	</Tabs.Tab>
+</Tabs>
 
 **Note:** please make sure to change the `domain.com` with your actual domain name.
 
