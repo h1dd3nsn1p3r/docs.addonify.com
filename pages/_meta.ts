@@ -55,8 +55,8 @@ export default {
 	},
 	store: {
 		type: "page",
-		title: "Store ↗",
-		href: "https://addonify.com/",
+		title: "☕️ Donate (Coffee)",
+		href: "https://donation.creamcode.org",
 		newWindow: true,
 	},
 };
