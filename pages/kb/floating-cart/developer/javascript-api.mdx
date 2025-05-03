@@ -15,7 +15,7 @@ Display addonify floating cart canvas/modal/panel programmatically when required
 
 ```javascript showLineNumbers filename="script.js"
 <script>
-addonifyFloatingCart.action.cart.open();
+addonifyFloatingCart.action.cart.open(e);
 </script>
 ```
 
@@ -29,7 +29,7 @@ Below is the jQuery example to open the floating cart on button click.
 		$("#your-btn-ele").on("click", (e) => {
 			e.preventDefault();
 				// Open cart.
-			addonifyFloatingCart.action.cart.open();
+			addonifyFloatingCart.action.cart.open(e);
     })
  	});
 })(jQuery);
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	if (ele) {
 		ele.addEventListener("click", function (e) {
 			e.preventDefault();
-			addonifyFloatingCart.action.cart.open();
+			addonifyFloatingCart.action.cart.open(e);
 		});
 	}
 });
@@ -59,7 +59,7 @@ Close the addonify floating cart canvas/modal/panel programmatically when requir
 
 ```javascript showLineNumbers filename="script.js"
 <script>
-addonifyFloatingCart.action.cart.close();
+addonifyFloatingCart.action.cart.close(e);
 </script>
 ```
 
@@ -73,7 +73,7 @@ Here's the jQuery example to close the floating cart on button click.
 		$("#your-btn-ele").on("click", (e) => {
 			e.preventDefault();
 				// Close cart.
-			addonifyFloatingCart.action.cart.close();
+			addonifyFloatingCart.action.cart.close(e);
 		})
  	});
 })(jQuery);
@@ -89,7 +89,7 @@ const ele = document.getElementById("your-btn-ele");
 if (ele) {
 	ele.addEventListener("click", function (e) {
 		e.preventDefault();
-		addonifyFloatingCart.action.cart.close();
+		addonifyFloatingCart.action.cart.close(e);
 	});
 }
 </script>
